@@ -2,10 +2,10 @@
   <div class="settings-page">
     <div class="container page">
       <div class="row">
-  
+
         <div class="col-md-6 offset-md-3 col-xs-12">
           <h1 class="text-xs-center">Your Settings</h1>
-  
+
           <form>
             <fieldset>
                 <fieldset class="form-group">
@@ -29,14 +29,19 @@
             </fieldset>
           </form>
         </div>
-  
+
       </div>
     </div>
   </div>
 </template>
+
 <script>
-  export default {
-    name: 'settingsIndex',
-    middleware: 'examine'
-  }
+export default {
+  middleware: 'authenticated',
+  name: 'SettingsIndex'
+}
 </script>
+
+<style>
+
+</style>

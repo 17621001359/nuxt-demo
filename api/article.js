@@ -1,24 +1,27 @@
-import {request} from '@/plugins/request.js'
+import { request } from '@/plugins/request'
 
+// 获取公共文章列表
 export const getArticles = params => {
   return request({
     method: 'GET',
-    url:'/api/articles',
+    url: '/api/articles',
     params
   })
 }
 
-export const getYourFeddArticles = params => {
+// 获取公共文章列表
+export const getYourFeedArticles = params => {
   return request({
     method: 'GET',
-    url:'/api/articles/feed',
+    url: '/api/articles/feed',
+    params,
     // headers: {
     //   // 添加用户身份，数据格式：Token空格Token数据
-    //   Authorization: `Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDgxMTYsInVzZXJuYW1lIjoibHB6OTk5IiwiZXhwIjoxNjIzOTA4MTkyfQ.r--sjLC2xcsZwzeAGqMP-rpyblnuU_8KECKBwc5vpEY`
-    // },
-    params
+    //   Authorization: `Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDgxMTYsInVzZXJuYW1lIjoibHB6OTk5IiwiZXhwIjoxNTk3NzQxNTA4fQ.2yO8Fss4hYnvsIN2UYHsutQ1hmYqSSAA-UrIRnP4DOY`
+    // }
   })
 }
+
 // 添加点赞
 export const addFavorite = slug => {
   return request({
@@ -36,8 +39,8 @@ export const deleteFavorite = slug => {
 }
 
 // 获取文章详情
-export const getArticle  = slug => {
-  return  request({
+export const getArticle = slug => {
+  return request({
     method: 'GET',
     url: `/api/articles/${slug}`
   })
@@ -50,4 +53,3 @@ export const getComments = slug => {
     url: `/api/articles/${slug}/comments`
   })
 }
-

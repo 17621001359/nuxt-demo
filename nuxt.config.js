@@ -2,7 +2,7 @@
  * Nuxt.js 配置文件
  */
 
- module.exports = {
+module.exports = {
   router: {
     linkActiveClass: 'active',
     // 自定义路由表规则
@@ -36,9 +36,9 @@
               component: resolve(__dirname, 'pages/profile/')
             },
             {
-              path: '/article/:slug',
-              name: 'article',
-              component: resolve(__dirname, 'pages/article/')
+              path: '/settings',
+              name: 'settings',
+              component: resolve(__dirname, 'pages/settings/')
             },
             {
               path: '/editor',
@@ -46,22 +46,24 @@
               component: resolve(__dirname, 'pages/editor/')
             },
             {
-              path: '/settings',
-              name: 'settings',
-              component: resolve(__dirname, 'pages/settings/')
-            },
+              path: '/article/:slug',
+              name: 'article',
+              component: resolve(__dirname, 'pages/article/')
+            }
           ]
         }
       ])
     }
   },
+
   server: {
     host: '0.0.0.0',
     port: 3000
   },
+
+  // 注册插件
   plugins: [
     '~/plugins/request.js',
     '~/plugins/dayjs.js'
   ]
-
 }

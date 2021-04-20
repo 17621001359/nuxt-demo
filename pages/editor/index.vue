@@ -2,7 +2,7 @@
   <div class="editor-page">
     <div class="container page">
       <div class="row">
-  
+
         <div class="col-md-10 offset-md-1 col-xs-12">
           <form>
             <fieldset>
@@ -24,14 +24,20 @@
             </fieldset>
           </form>
         </div>
-  
+
       </div>
     </div>
   </div>
 </template>
+
 <script>
-  export default {
-    name : 'editorIndex',
-    middleware: 'examine'
-  }
+export default {
+  // 在路由匹配组件渲染之前会先执行中间件处理
+  middleware: 'authenticated',
+  name: 'EditorIndex'
+}
 </script>
+
+<style>
+
+</style>

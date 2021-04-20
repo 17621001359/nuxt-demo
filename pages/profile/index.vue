@@ -4,7 +4,7 @@
     <div class="user-info">
       <div class="container">
         <div class="row">
-  
+
           <div class="col-xs-12 col-md-10 offset-md-1">
             <img src="http://i.imgur.com/Qr71crq.jpg" class="user-img" />
             <h4>Eric Simons</h4>
@@ -14,17 +14,17 @@
             <button class="btn btn-sm btn-outline-secondary action-btn">
               <i class="ion-plus-round"></i>
               &nbsp;
-              Follow Eric Simons 
+              Follow Eric Simons
             </button>
           </div>
-  
+
         </div>
       </div>
     </div>
-  
+
     <div class="container">
       <div class="row">
-  
+
         <div class="col-xs-12 col-md-10 offset-md-1">
           <div class="articles-toggle">
             <ul class="nav nav-pills outline-active">
@@ -36,7 +36,7 @@
               </li>
             </ul>
           </div>
-  
+
           <div class="article-preview">
             <div class="article-meta">
               <a href=""><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
@@ -54,7 +54,7 @@
               <span>Read more...</span>
             </a>
           </div>
-  
+
           <div class="article-preview">
             <div class="article-meta">
               <a href=""><img src="http://i.imgur.com/N4VcUeJ.jpg" /></a>
@@ -76,17 +76,23 @@
               </ul>
             </a>
           </div>
-  
-  
+
+
         </div>
-  
+
       </div>
     </div>
-  
+
   </div>
 </template>
+
 <script>
-  export default {
-    name : 'profileIndex'
-  }
+export default {
+  middleware: 'authenticated',
+  name: 'UserProfile'
+}
 </script>
+
+<style>
+
+</style>
